@@ -3,7 +3,7 @@
 import {useState} from 'react';
 import {AnimatePresence, motion} from 'framer-motion';
 import Image from 'next/image';
-import {ChevronDown, Gem, Mail, Map, ScrollText, Shield, Swords, X} from 'lucide-react';
+import {ChevronDown, Gem, Mail, Map, ScrollText, Shield, Swords} from 'lucide-react';
 import type {Locale, SiteData} from '@/data/site-data';
 import {AnimatedSection} from '@/components/animated-section';
 import {BookingForm} from '@/components/booking-form';
@@ -14,12 +14,12 @@ import {Header} from '@/components/header';
 import {MagicButton} from '@/components/magic-button';
 import {PortraitFrame} from '@/components/portrait-frame';
 import {ScrollProgress} from '@/components/scroll-progress';
+import {WorldOfLux} from '@/components/sections/world-of-lux';
 
 const icons = [ScrollText, Swords, Map, Shield, Gem, Mail];
 
 export function HomePage({data}: {locale: Locale; data: SiteData}) {
   const [filter, setFilter] = useState('all');
-  const [lightbox, setLightbox] = useState<string | null>(null);
   const filteredCampaigns = data.campaigns.filter((campaign) => filter === 'all' || campaign.tags.includes(filter));
 
   return (
@@ -103,57 +103,11 @@ export function HomePage({data}: {locale: Locale; data: SiteData}) {
         </motion.div>
       </AnimatedSection>
 
-      <AnimatedSection className="py-20">
-        <SectionTitle title={data.timelineTitle} />
-        <div className="section-shell mt-12 grid gap-4">
-          {data.timeline.map((item, index) => (
-            <motion.div
-              key={item}
-              initial={{opacity: 0, x: index % 2 ? 44 : -44}}
-              whileInView={{opacity: 1, x: 0}}
-              viewport={{once: true}}
-              transition={{duration: 0.55, delay: index * 0.04}}
-              className="grid items-center gap-4 md:grid-cols-[1fr_60px_1fr]"
-            >
-              <div className={index % 2 ? 'hidden md:block' : 'md:text-right'}>
-                {index % 2 === 0 && <TimelineCard index={index} item={item} />}
-              </div>
-              <div className="mx-auto grid h-12 w-12 place-items-center rounded-full border border-gold/50 bg-ember font-heading text-gold">
-                {index + 1}
-              </div>
-              <div>{index % 2 === 1 && <TimelineCard index={index} item={item} />}</div>
-            </motion.div>
-          ))}
-        </div>
-      </AnimatedSection>
+      <WorldOfLux data={data.worldLux} />
 
       <AnimatedSection className="py-20">
         <div className="section-shell">
           <DiceRoller data={data} />
-        </div>
-      </AnimatedSection>
-
-      <AnimatedSection className="py-20">
-        <SectionTitle title={data.galleryTitle} />
-        <div className="section-shell mt-10 columns-1 gap-5 sm:columns-2 lg:columns-3">
-          {data.gallery.map((item, index) => (
-            <button
-              key={item}
-              onClick={() => setLightbox(item)}
-              className="mb-5 block w-full break-inside-avoid overflow-hidden clip-fantasy border border-gold/25 bg-ember text-left shadow-glow"
-            >
-              <div
-                className="h-56 transition duration-500 hover:scale-105"
-                style={{
-                  background:
-                    index % 2
-                      ? 'linear-gradient(135deg, rgba(124,58,237,.28), rgba(10,9,16,.9)), radial-gradient(circle at 50% 40%, rgba(232,214,176,.18), transparent 32%)'
-                      : 'linear-gradient(135deg, rgba(200,155,60,.24), rgba(36,26,18,.92)), radial-gradient(circle at 42% 38%, rgba(139,46,46,.26), transparent 30%)'
-                }}
-              />
-              <p className="p-4 font-heading text-xl text-bone">{item}</p>
-            </button>
-          ))}
         </div>
       </AnimatedSection>
 
@@ -225,17 +179,6 @@ export function HomePage({data}: {locale: Locale; data: SiteData}) {
         </div>
       </footer>
 
-      {lightbox && (
-        <div className="fixed inset-0 z-[90] grid place-items-center bg-night/90 p-5 backdrop-blur-md" onClick={() => setLightbox(null)}>
-          <div className="relative w-full max-w-3xl clip-fantasy border border-gold/40 bg-ember p-6 shadow-arcane">
-            <button className="absolute right-4 top-4 text-gold" onClick={() => setLightbox(null)} aria-label="Close">
-              <X className="h-6 w-6" />
-            </button>
-            <div className="h-[48vh] bg-radial-rune map-texture" />
-            <p className="mt-5 font-heading text-3xl text-bone">{lightbox}</p>
-          </div>
-        </div>
-      )}
     </main>
   );
 }
@@ -325,14 +268,6 @@ function SectionTitle({title}: {title: string}) {
     <div className="section-shell text-center">
       <div className="rune-divider mx-auto mb-6 max-w-md" />
       <h2 className="font-heading text-4xl text-bone md:text-6xl">{title}</h2>
-    </div>
-  );
-}
-
-function TimelineCard({item}: {index: number; item: string}) {
-  return (
-    <div className="clip-fantasy border border-gold/25 bg-ember/70 p-5">
-      <p className="font-heading text-2xl text-bone">{item}</p>
     </div>
   );
 }

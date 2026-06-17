@@ -1,6 +1,7 @@
 'use client';
 
 import {motion} from 'framer-motion';
+import Image from 'next/image';
 
 type Campaign = {
   id: string;
@@ -22,8 +23,17 @@ export function CampaignCard({campaign}: {campaign: Campaign}) {
       whileHover={{y: -8}}
       className="group clip-fantasy overflow-hidden border border-gold/25 bg-ember/80 shadow-glow"
     >
-      <div className="relative h-48 overflow-hidden" style={{background: campaign.image}}>
-        <div className="absolute inset-0 map-texture opacity-70 transition duration-500 group-hover:scale-110" />
+      <div className="relative h-48 overflow-hidden bg-ember">
+        <Image
+          src={campaign.image}
+          alt=""
+          fill
+          loading="eager"
+          sizes="(min-width: 1280px) 33vw, (min-width: 768px) 50vw, 100vw"
+          className="object-cover transition duration-700 group-hover:scale-110"
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-night/95 via-night/30 to-night/15" />
+        <div className="absolute inset-0 map-texture opacity-35" />
         <div className="absolute bottom-4 left-4 right-4 flex items-center justify-between text-xs uppercase text-parchment">
           <span>{campaign.genre}</span>
           <span>{campaign.duration}</span>

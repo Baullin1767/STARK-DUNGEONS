@@ -5,32 +5,32 @@ export type SiteData = ReturnType<typeof getSiteData>;
 const sharedCampaigns = [
   {
     id: 'village-mist',
-    image: 'linear-gradient(135deg, rgba(200,155,60,.28), rgba(36,26,18,.9)), radial-gradient(circle at 35% 30%, rgba(255,201,91,.32), transparent 24%)',
+    image: '/images/campaigns/The Village in the Mist.png',
     tags: ['oneShot', 'mystery', 'darkFantasy']
   },
   {
     id: 'edge-tavern',
-    image: 'linear-gradient(135deg, rgba(124,58,237,.28), rgba(10,9,16,.92)), radial-gradient(circle at 68% 28%, rgba(232,214,176,.22), transparent 24%)',
+    image: '/images/campaigns/The Tavern at the Edge of the World.png',
     tags: ['oneShot', 'mystery', 'darkFantasy']
   },
   {
     id: 'lux-living-dead',
-    image: 'linear-gradient(135deg, rgba(139,46,46,.38), rgba(10,9,16,.92)), radial-gradient(circle at 44% 36%, rgba(200,155,60,.28), transparent 26%)',
+    image: '/images/campaigns/Lux Age of the Living Dead.png',
     tags: ['campaign', 'darkFantasy']
   },
   {
     id: 'lux-lost-kingdom',
-    image: 'linear-gradient(135deg, rgba(200,155,60,.22), rgba(21,17,29,.94)), repeating-linear-gradient(45deg, rgba(232,214,176,.08) 0 1px, transparent 1px 10px)',
+    image: '/images/campaigns/Lux The Lost Kingdom.png',
     tags: ['campaign', 'mystery']
   },
   {
     id: 'lux-underdark',
-    image: 'linear-gradient(135deg, rgba(232,214,176,.18), rgba(10,9,16,.94)), radial-gradient(circle at 50% 30%, rgba(124,58,237,.32), transparent 25%)',
+    image: '/images/campaigns/Lux Expedition into the Underdark.png',
     tags: ['campaign', 'mystery', 'darkFantasy']
   },
   {
     id: 'lux-edge-world',
-    image: 'linear-gradient(135deg, rgba(139,46,46,.3), rgba(36,26,18,.9)), radial-gradient(circle at 72% 24%, rgba(200,155,60,.26), transparent 24%)',
+    image: '/images/campaigns/Lux Expedition to the Edge of the World.png',
     tags: ['campaign', 'mystery']
   }
 ];
@@ -133,6 +133,21 @@ export function getSiteData(locale: Locale) {
         description: copy[index][3]
       };
     }),
+    worldLux: {
+      title: ru ? 'Мир Лукс' : 'World of Lux',
+      paragraphs: ru
+        ? [
+            'Лукс — плоский континент, дрейфующий среди течений Астрального моря. С наступлением ночи окружающее пространство погружается в хаотические штормы Лимбо, а границы между мирами становятся настолько тонкими, что путешествие в другие планы может начаться буквально за ближайшим поворотом дороги.',
+            'На протяжении тысячелетий Луксом правили драконы, небеснокровные асимары и разумные машины. Империи возвышались и рушились, боги вмешивались в судьбу смертных, а войны меняли саму структуру мира. Сегодня континент переживает новую Эпоху Городов-Государств, где древние тайны прошлого по-прежнему скрыты среди руин погибших цивилизаций.',
+            'Каждая кампания в Луксе раскрывает отдельную эпоху этой истории: падение драконьих империй, экспедиции к древним обелискам и путешествия к затерянным уголкам мира.'
+          ]
+        : [
+            'Lux is a flat continent drifting through the currents of the Astral Sea. At night the surrounding space is consumed by the chaotic storms of Limbo, and the boundaries between worlds become so thin that a journey into another plane may begin around the next corner.',
+            'For thousands of years Lux was ruled by dragons, celestial aasimar dynasties and intelligent machines. Empires rose and fell, gods intervened in mortal affairs, and wars reshaped the world itself. Today the continent lives through a new Age of City-States where the secrets of ancient civilizations remain hidden beneath forgotten ruins.',
+            'Each campaign set in Lux explores a different era of its history: the fall of dragon empires, expeditions to ancient obelisks and journeys into the unknown.'
+          ],
+      image: '/images/campaigns/Lux word illustration.png'
+    },
     timelineTitle: ru ? 'Как проходит сессия' : 'Session Experience',
     timeline: ru
       ? ['Подготовка персонажей', 'Начало приключения', 'Исследование мира', 'Сражения и испытания', 'Кульминация', 'Последствия выбора']
