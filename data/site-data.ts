@@ -4,34 +4,34 @@ export type SiteData = ReturnType<typeof getSiteData>;
 
 const sharedCampaigns = [
   {
-    id: 'lantern',
+    id: 'village-mist',
     image: 'linear-gradient(135deg, rgba(200,155,60,.28), rgba(36,26,18,.9)), radial-gradient(circle at 35% 30%, rgba(255,201,91,.32), transparent 24%)',
-    tags: ['oneShot', 'beginner', 'mystery']
+    tags: ['oneShot', 'mystery', 'darkFantasy']
   },
   {
-    id: 'forest',
+    id: 'edge-tavern',
     image: 'linear-gradient(135deg, rgba(124,58,237,.28), rgba(10,9,16,.92)), radial-gradient(circle at 68% 28%, rgba(232,214,176,.22), transparent 24%)',
-    tags: ['campaign', 'darkFantasy', 'mystery']
+    tags: ['oneShot', 'mystery', 'darkFantasy']
   },
   {
-    id: 'dragon',
+    id: 'lux-living-dead',
     image: 'linear-gradient(135deg, rgba(139,46,46,.38), rgba(10,9,16,.92)), radial-gradient(circle at 44% 36%, rgba(200,155,60,.28), transparent 26%)',
     tags: ['campaign', 'darkFantasy']
   },
   {
-    id: 'clockwork',
+    id: 'lux-lost-kingdom',
     image: 'linear-gradient(135deg, rgba(200,155,60,.22), rgba(21,17,29,.94)), repeating-linear-gradient(45deg, rgba(232,214,176,.08) 0 1px, transparent 1px 10px)',
     tags: ['campaign', 'mystery']
   },
   {
-    id: 'oracle',
+    id: 'lux-underdark',
     image: 'linear-gradient(135deg, rgba(232,214,176,.18), rgba(10,9,16,.94)), radial-gradient(circle at 50% 30%, rgba(124,58,237,.32), transparent 25%)',
-    tags: ['oneShot', 'mystery', 'darkFantasy']
+    tags: ['campaign', 'mystery', 'darkFantasy']
   },
   {
-    id: 'coast',
+    id: 'lux-edge-world',
     image: 'linear-gradient(135deg, rgba(139,46,46,.3), rgba(36,26,18,.9)), radial-gradient(circle at 72% 24%, rgba(200,155,60,.26), transparent 24%)',
-    tags: ['campaign', 'beginner']
+    tags: ['campaign', 'mystery']
   }
 ];
 
@@ -109,20 +109,20 @@ export function getSiteData(locale: Locale) {
     campaigns: sharedCampaigns.map((campaign, index) => {
       const copy = ru
         ? [
-            ['Таверна Чёрного Фонаря', 'Мистика / 1-4 уровни', 'Один вечер', 'Ночь в таверне, где каждый гость скрывает долг перед мёртвым трактирщиком.'],
-            ['Проклятие Лунного Леса', 'Тёмное фэнтези / 3-6 уровни', '4-6 сессий', 'Древний лес просыпается, а луна выбирает новых охотников и жертв.'],
-            ['Пепел Короля Драконов', 'Эпик / 5-10 уровни', '8+ сессий', 'Королевство стоит на пепле драконьей династии, и трон снова зовёт огонь.'],
-            ['Заводной Город', 'Детектив / 2-5 уровни', '3-5 сессий', 'Город механизмов повторяет один день, пока герои не найдут сломанное сердце машины.'],
-            ['Гробница Безмолвного Оракула', 'Мистика / 4-7 уровни', '2-3 сессии', 'В подземном храме ответы звучат только тем, кто готов заплатить воспоминаниями.'],
-            ['Багровый Берег', 'Море / 3-8 уровни', '6+ сессий', 'Пираты, культы и штормы сходятся там, где море окрашивается красным.']
+            ['Деревня в туманах', 'Мистический хоррор', 'Ваншот', 'Атмосферный ваншот в жанре мистического хоррора, где группа приключенцев сопровождает священника в отдалённую деревню, затерянную среди бесконечных туманов. Местного гробовщика охватило странное безумие, жители избегают разговоров о прошлом, а старая церковь хранит больше вопросов, чем ответов. Героям предстоит раскрыть тайну, скрытую в сердце деревни, прежде чем нечто древнее и давно забытое окончательно пробудится. Время играет против них, и каждый неверный шаг приближает момент, когда последствия уже невозможно будет остановить.'],
+            ['Таверна на краю света', 'Вестерн-хоррор / Детектив', 'Ваншот', 'Вестерн-хоррор о расследовании убийства в заснеженной таверне, отрезанной от остального мира беспощадной метелью. Когда один из постояльцев оказывается мёртв, становится ясно, что у каждого присутствующего были причины желать ему смерти. Пока буря не позволяет покинуть таверну, героям предстоит разобраться в запутанной паутине лжи, старых обид и скрытых мотивов. Но время уходит, и если убийца не будет найден достаточно быстро, следующая жертва может появиться ещё до рассвета.'],
+            ['Лукс: Эра живых мертвецов', 'Кампания / Авторский мир / Тёмное фэнтези / Моральный выбор', 'Кампания', 'Кампания в авторском мире Лукс — плоском континенте, парящем среди Астрального моря днём и дрейфующем через хаотические течения Лимбо ночью. После прихода к власти Векны, бога и повелителя нежити, мир изменился навсегда. Мёртвые больше не скрываются в могилах и руинах — они живут рядом с живыми, строят государства, заключают союзы и ведут войны. Героям предстоит разобраться в причинах этого нового порядка и решить, какую сторону принять в конфликте, способном определить будущее всего Лукса.'],
+            ['Лукс: Затерянное королевство', 'Кампания / Эпическое приключение / Древние тайны / Авторский мир', 'Кампания высоких уровней', 'Эпическая кампания для персонажей высоких уровней, действие которой разворачивается в эпоху городов-государств Лукса. Пока могущественные государства поддерживают хрупкий мир, скрывая старые обиды и амбиции за дипломатией и торговлей, герои отправляются на поиски Багрового Острова — утраченной части континента, отколовшейся от Лукса и затерявшейся среди бескрайнего Астрального моря. Это путешествие приведёт их к древним тайнам, забытым эпохам и ответам на вопросы, которые веками оставались лишь легендами. Чем дальше продвигается экспедиция, тем яснее становится, что история самого Лукса была совсем не такой, какой её знают жители мира.'],
+            ['Лукс: Экспедиция в подземье', 'Кампания / Подземье / Выживание / Детектив', 'Кампания', 'В мире Лукс подземье давно перестало быть неизведанной территорией. Его карты составлены, древние руины изучены, а масштабные экспедиции давно превратились в популярное развлечение для путешественников, учёных и искателей приключений. Однако очередное путешествие оборачивается катастрофой, когда на участников обрушиваются орды чудовищ, появившихся там, где их не должно было быть. Оказавшись отрезанными от основной группы глубоко под землёй, героям предстоит найти выживших, раскрыть источник новой угрозы и остановить её, прежде чем тьма вырвется на поверхность и изменит весь Лукс.'],
+            ['Лукс: Экспедиция на край света', 'Кампания / Эпическое приключение / Древние тайны / Арктическая экспедиция', 'Кампания', 'На далёком севере Лукса возвышается один из четырёх древних Обелисков — магических монолитов, удерживающих континент среди течений Астрального моря. Столетия назад Северный Обелиск был повреждён, и с тех пор земли вокруг него поглотили вечные снега и ледяные бури. Немногие поселения ещё цепляются за жизнь на южной окраине региона, но дальше на север лежат лишь руины, чудовища и бескрайняя белая пустыня. Герои присоединяются к научной экспедиции, целью которой является исследование Обелиска и поиск ответов на одну из величайших загадок истории. Что произошло в последние дни Драконьей Империи? Почему исчезли драконы, некогда правившие всем континентом? И какую цену придётся заплатить за правду, скрытую среди льдов и забытых руин древнего Троунгарда?']
           ]
         : [
-            ['The Black Lantern Tavern', 'Mystery / Levels 1-4', 'One evening', 'A night in a tavern where every guest owes a debt to the dead innkeeper.'],
-            ['Curse of the Moonlit Forest', 'Dark Fantasy / Levels 3-6', '4-6 sessions', 'An ancient forest awakens while the moon chooses new hunters and prey.'],
-            ['Ashes of the Dragon King', 'Epic / Levels 5-10', '8+ sessions', 'A kingdom stands on the ashes of a dragon dynasty, and the throne calls for fire again.'],
-            ['The Clockwork City', 'Mystery / Levels 2-5', '3-5 sessions', 'A city of mechanisms repeats one day until the heroes find the machine heart.'],
-            ['Tomb of the Silent Oracle', 'Mystery / Levels 4-7', '2-3 sessions', 'In an underground temple, answers speak only to those willing to pay in memories.'],
-            ['The Crimson Coast', 'Sea / Levels 3-8', '6+ sessions', 'Pirates, cults and storms converge where the sea turns red.']
+            ['The Village in the Mist', 'Mystery Horror', 'One-shot', 'An atmospheric mystery-horror one-shot where a group of adventurers accompanies a priest to a remote village lost within endless mist. The local gravedigger has fallen into strange madness, the villagers avoid speaking of the past, and the old church holds more questions than answers. The heroes must uncover the secret buried at the heart of the settlement before something ancient and long forgotten fully awakens. Time is not on their side, and every wrong turn brings them closer to a point where the consequences can no longer be contained.'],
+            ['The Tavern at the Edge of the World', 'Western Horror / Mystery', 'One-shot', 'A western horror mystery set in a remote northern tavern cut off from the outside world by a relentless blizzard. When one of the guests is found dead, it quickly becomes clear that everyone present had a reason to want him gone. Trapped inside while the storm rages on, the heroes must untangle a web of lies, grudges and hidden motives. Time is running out, and if the killer is not uncovered soon, another victim may fall before dawn.'],
+            ['Lux: Age of the Living Dead', 'Campaign / Original World / Dark Fantasy / Moral Choice', 'Campaign', 'A campaign set in the original world of Lux — a flat continent drifting through the Astral Sea by day and the chaotic tides of Limbo by night. After Vecna, the god and lord of the undead, rose to power, the world changed forever. The dead no longer dwell only in tombs and forgotten ruins; they live alongside the living, build kingdoms, forge alliances and wage wars. The heroes must uncover the truth behind this new age and decide where they stand in a conflict that may shape the future of all Lux.'],
+            ['Lux: The Lost Kingdom', 'Campaign / Epic Adventure / Ancient Secrets / Original World', 'High-level campaign', 'An epic high-level campaign set during the age of the city-states of Lux. While powerful nations maintain a fragile peace built upon old rivalries, political ambitions and uneasy alliances, the heroes embark on a quest to find the Crimson Island — a lost fragment of the continent that broke away from Lux and vanished into the endless Astral Sea. Their journey will uncover ancient secrets, forgotten ages and truths buried beneath centuries of myth. As the expedition moves forward, the heroes begin to realize that the history of Lux may be very different from what the world has always believed.'],
+            ['Lux: Expedition into the Underdark', 'Campaign / Underdark / Survival / Mystery', 'Campaign', 'In the world of Lux, the Underdark has long ceased to be an unexplored frontier. Its tunnels have been mapped, its ancient ruins studied, and large expeditions have become a popular attraction for travelers, scholars and adventurers alike. But what should have been a routine journey turns into a disaster when hordes of monsters emerge from places where none should exist. Cut off from the main expedition deep beneath the surface, the heroes must find survivors, uncover the source of the threat and stop it before the darkness breaks into the world above and changes Lux forever.'],
+            ['Lux: Expedition to the Edge of the World', 'Campaign / Epic Adventure / Ancient Secrets / Arctic Exploration', 'Campaign', 'Far in the frozen north of Lux stands one of the Four Obelisks — ancient magical monoliths that keep the continent afloat within the currents of the Astral Sea. Centuries ago, the Northern Obelisk was damaged, and the lands surrounding it were consumed by endless snowstorms and eternal winter. A handful of mining settlements still survive on the southern edge of the region, but beyond them lie only ruins, monsters and an endless frozen wilderness. The heroes join a scientific expedition seeking answers to one of the greatest mysteries in Lux\'s history. What truly happened during the final days of the Dragon Empire? Why did the dragons, once rulers of the continent, vanish almost overnight? And what price must be paid for the truth buried beneath the ice and the forgotten ruins of ancient Throungard?']
           ];
 
       return {
