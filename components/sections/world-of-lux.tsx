@@ -15,7 +15,6 @@ export function WorldOfLux({data}: {data: WorldLuxData}) {
     target: sectionRef,
     offset: ['start end', 'end start']
   });
-  const imageY = useTransform(scrollYProgress, [0, 1], ['-7%', '7%']);
   const lightX = useTransform(scrollYProgress, [0, 1], ['-18%', '18%']);
 
   return (
@@ -78,16 +77,14 @@ export function WorldOfLux({data}: {data: WorldLuxData}) {
           viewport={{once: true, margin: '-120px'}}
           transition={{duration: 0.85, delay: 0.06, ease: [0.22, 1, 0.36, 1]}}
         >
-          <div className="relative min-h-[320px] overflow-hidden rounded-2xl border border-gold/30 bg-ember shadow-[0_0_56px_rgba(200,155,60,0.22),0_0_90px_rgba(124,58,237,0.18)] md:min-h-[460px]">
-            <motion.div className="absolute -inset-y-10 inset-x-0" style={{y: imageY}}>
-              <Image
-                src={data.image}
-                alt={data.title}
-                fill
-                sizes="(min-width: 1024px) 54vw, 100vw"
-                className="object-cover"
-              />
-            </motion.div>
+          <div className="relative aspect-[3/2] overflow-hidden rounded-2xl border border-gold/30 bg-ember shadow-[0_0_56px_rgba(200,155,60,0.22),0_0_90px_rgba(124,58,237,0.18)]">
+            <Image
+              src={data.image}
+              alt={data.title}
+              fill
+              sizes="(min-width: 1024px) 54vw, 100vw"
+              className="object-contain"
+            />
             <div className="absolute inset-0 bg-gradient-to-t from-night/55 via-transparent to-night/10" />
             <div className="absolute inset-0 rounded-2xl ring-1 ring-inset ring-bone/10" />
             <motion.div

@@ -19,3 +19,29 @@
  ✓ Compiled in 78ms (696 modules)
  ✓ Compiled in 90ms (696 modules)
  ✓ Compiled in 113ms (696 modules)
+ ✓ Compiled in 435ms (696 modules)
+ ✓ Compiled in 267ms (696 modules)
+ ✓ Compiled in 103ms (696 modules)
+ ✓ Compiled /[locale] in 179ms (888 modules)
+ GET / 200 in 520ms
+ GET / 200 in 96ms
+ GET / 200 in 106ms
+ GET / 200 in 99ms
+ ✓ Compiled in 308ms (1584 modules)
+ GET / 200 in 99ms
+ GET / 200 in 209ms
+ GET / 200 in 117ms
+ ✓ Compiled in 158ms (696 modules)
+ GET / 200 in 41ms
+ ✓ Compiled in 550ms (1586 modules)
+ GET / 200 in 524ms
+ GET /en 200 in 92ms
+ GET /en 200 in 233ms
+ GET /en 200 in 255ms
+ ✓ Compiled in 327ms (1586 modules)
+ GET / 200 in 103ms
+ GET /en 200 in 393ms
+ GET /en 200 in 252ms
+ ✓ Compiled in 223ms (1586 modules)
+ GET / 200 in 87ms
+ GET /en 200 in 248ms

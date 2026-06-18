@@ -125,9 +125,10 @@ export function HomePage({data}: {locale: Locale; data: SiteData}) {
 
       <AnimatedSection id="pricing" className="py-20">
         <SectionTitle title={data.pricingTitle} />
-        <div className="section-shell mt-10 grid gap-5 lg:grid-cols-3">
+        <p className="section-shell mt-4 text-center text-base text-ash">{data.pricingSubtitle}</p>
+        <div className="section-shell mt-10 grid gap-5 md:grid-cols-2 xl:grid-cols-4">
           {data.pricing.map(([title, desc, price], index) => (
-            <FantasyCard key={title} className={index === 1 ? 'border-gold bg-gold/10' : ''}>
+            <FantasyCard key={title} className={index === 2 ? 'border-gold bg-gold/10' : ''}>
               <h3 className="font-heading text-3xl text-bone">{title}</h3>
               <p className="mt-4 min-h-24 text-sm leading-6 text-ash">{desc}</p>
               <p className="mt-7 font-heading text-4xl text-gold">{price}</p>
@@ -204,8 +205,8 @@ function Hero({data}: {data: SiteData}) {
       >
         <div className="h-full w-full map-texture" />
       </motion.div>
-      <div className="section-shell relative z-10 grid items-center gap-10 py-16 lg:grid-cols-[1.02fr_0.98fr]">
-        <div>
+      <div className="section-shell relative z-10 py-16">
+        <div className="max-w-4xl">
           <motion.h1
             initial={{opacity: 0, y: 32}}
             animate={{opacity: 1, y: 0}}
@@ -233,29 +234,6 @@ function Hero({data}: {data: SiteData}) {
               {data.hero.secondary}
             </MagicButton>
           </motion.div>
-        </div>
-        <div className="relative min-h-[360px] lg:min-h-[420px]">
-          <motion.div
-            animate={{y: [0, -12, 0], rotate: [0, 1, 0]}}
-            transition={{duration: 6, repeat: Infinity, ease: 'easeInOut'}}
-            className="absolute left-4 top-4 h-36 w-36 clip-fantasy border border-gold/35 bg-umber/80 shadow-glow"
-          />
-          <motion.div
-            animate={{y: [0, 16, 0], rotate: [0, -1.5, 0]}}
-            transition={{duration: 7, repeat: Infinity, ease: 'easeInOut'}}
-            className="absolute bottom-10 right-6 h-44 w-44 rounded-full border border-arcane/45 bg-radial-rune shadow-arcane"
-          />
-          <div className="absolute inset-8 clip-fantasy border border-gold/25 bg-ember/55 p-8 shadow-glow backdrop-blur-sm">
-            <div className="h-full map-texture">
-              <div className="grid h-full place-items-center text-center">
-                <div>
-                  <p className="font-heading text-5xl text-gold">d20</p>
-                  <div className="rune-divider my-5" />
-                  <p className="text-sm uppercase text-parchment">STARK DUNGEONS</p>
-                </div>
-              </div>
-            </div>
-          </div>
         </div>
       </div>
       <div className="absolute bottom-0 left-0 right-0 h-28 bg-gradient-to-t from-night to-transparent" />

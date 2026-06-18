@@ -1,3 +1,5 @@
+import {getD100FateMessages} from '@/data/d100-fate-messages';
+
 export type Locale = 'ru' | 'en';
 
 export type SiteData = ReturnType<typeof getSiteData>;
@@ -155,11 +157,7 @@ export function getSiteData(locale: Locale) {
     dice: {
       title: ru ? 'Кубик судьбы' : 'Dice of Fate',
       button: ru ? 'Бросить кубик судьбы' : 'Roll the Dice of Fate',
-      natural20: ru ? 'Натуральная двадцатка. Боги благосклонны.' : 'Natural 20. The gods are smiling upon you.',
-      natural1: ru ? 'Натуральная единица. Судьба приготовила испытание.' : 'Natural 1. Fate has prepared a challenge.',
-      messages: ru
-        ? ['В таверне кто-то уже ждёт вас.', 'Древняя карта раскрыла новый путь.', 'NPC запомнит этот выбор.', 'В темноте шевельнулась легенда.']
-        : ['Someone is already waiting in the tavern.', 'An ancient map reveals a new path.', 'An NPC will remember this choice.', 'A legend stirs in the dark.']
+      messages: getD100FateMessages(locale)
     },
     galleryTitle: ru ? 'Галерея миров' : 'World Gallery',
     gallery: ru
@@ -177,42 +175,49 @@ export function getSiteData(locale: Locale) {
           ['Ilya', 'The NPCs felt alive, combat was tense, and our choices caught up with us sessions later.'],
           ['Anna', 'The best corporate adventure: everyone joined in, laughed and argued like a real party.']
         ],
-    pricingTitle: ru ? 'Стоимость' : 'Pricing',
+    pricingTitle: ru ? 'Стоимость участия' : 'Participation Pricing',
+    pricingSubtitle: ru
+      ? 'Можно записаться одному или готовой группой — недостающих игроков я помогу найти.'
+      : 'Join individually or as a ready-made group — I can help find the remaining players.',
     pricing: ru
       ? [
-          ['Первая Квестовая Ночь', 'Знакомство с игрой, готовые персонажи, один завершённый сюжет.', 'от 8 000 ₽'],
-          ['Героическая Компания', 'Серия сессий, личные арки, карты, музыка и подготовка между играми.', 'от 18 000 ₽'],
-          ['Легендарная Кампания', 'Долгий сезон с миром, фракциями, последствиями и индивидуальными материалами.', 'по запросу']
+          ['3 игрока', 'Сессия длится 3 часа, после игры — ещё 30 минут на обсуждение и обратную связь.', '2 000 ₽ / игрок'],
+          ['4 игрока', 'Сессия длится 3 часа, после игры — ещё 30 минут на обсуждение и обратную связь.', '1 700 ₽ / игрок'],
+          ['5 игроков', 'Сессия длится 3 часа, после игры — ещё 30 минут на обсуждение и обратную связь.', '1 500 ₽ / игрок'],
+          ['6 игроков', 'Сессия увеличивается до 4 часов, после игры — ещё 30 минут на обсуждение и обратную связь.', '1 500 ₽ / игрок']
         ]
       : [
-          ['First Quest', 'Game introduction, ready characters and one complete story.', 'from $120'],
-          ['Heroic Party', 'A session arc with personal stories, maps, music and prep between games.', 'from $280'],
-          ['Legendary Campaign', 'A long season with worldbuilding, factions, consequences and custom materials.', 'custom']
+          ['3 players', 'A 3-hour session followed by 30 minutes for discussion and feedback.', '2,000 ₽ / player'],
+          ['4 players', 'A 3-hour session followed by 30 minutes for discussion and feedback.', '1,700 ₽ / player'],
+          ['5 players', 'A 3-hour session followed by 30 minutes for discussion and feedback.', '1,500 ₽ / player'],
+          ['6 players', 'The session is extended to 4 hours, followed by 30 minutes for discussion and feedback.', '1,500 ₽ / player']
         ],
     faqTitle: 'FAQ',
     faq: ru
       ? [
           ['Нужен ли опыт игры?', 'Нет. Я объясню правила через действие и помогу создать героя.'],
           ['Можно ли играть онлайн?', 'Да. Провожу игры в Discord и на виртуальных столах.'],
-          ['Сколько длится сессия?', 'Обычно 3-4 часа, но формат можно адаптировать под группу.'],
+          ['Сколько длится сессия?', 'Для 3-5 игроков — 3 часа, для 6 игроков — 4 часа. После игры предусмотрено ещё 30 минут на обсуждение и обратную связь.'],
           ['Сколько игроков может участвовать?', 'Оптимально 3-6 игроков, для событий можно больше.']
         ]
       : [
           ['Do I need previous experience?', 'No. I teach the rules through play and help with character creation.'],
           ['Can we play online?', 'Yes. I run sessions in Discord and virtual tabletops.'],
-          ['How long is a session?', 'Usually 3-4 hours, but the format can fit the group.'],
+          ['How long is a session?', 'Sessions last 3 hours for 3-5 players and 4 hours for 6 players, plus 30 minutes for discussion and feedback.'],
           ['How many players can join?', 'The sweet spot is 3-6 players, with larger event formats available.']
         ],
     booking: {
-      title: ru ? 'Готовы начать приключение?' : 'Ready to begin your adventure?',
+      title: ru ? 'Хотите присоединиться к игре?' : 'Want to join a game?',
       subtitle: ru
-        ? 'Расскажите о своей группе, желаемом формате и любимом жанре приключений.'
-        : 'Tell me about your group, preferred format and favorite adventure style.',
+        ? 'Оставьте имя, ник в Telegram и пару слов о себе — я напишу вам и расскажу о ближайших играх.'
+        : 'Leave your name, Telegram username and a few words about yourself. I will message you about upcoming games.',
       fields: ru
-        ? ['Имя', 'Email', 'Telegram / Discord', 'Количество игроков', 'Формат', 'Опыт', 'Сообщение']
-        : ['Name', 'Email', 'Telegram / Discord', 'Player Count', 'Preferred Format', 'Experience Level', 'Message'],
+        ? {name: 'Имя', telegram: 'Ник в Telegram', about: 'Коротко о себе'}
+        : {name: 'Name', telegram: 'Telegram username', about: 'A few words about yourself'},
       submit: ru ? 'Отправить вестника' : 'Send Messenger',
-      success: ru ? 'Ваш вестник отправлен. Скоро я свяжусь с вами.' : 'Your messenger has been sent. I will contact you soon.'
+      sending: ru ? 'Вестник в пути...' : 'Sending...',
+      success: ru ? 'Заявка отправлена. Скоро я напишу вам в Telegram.' : 'Your request has been sent. I will message you on Telegram soon.',
+      error: ru ? 'Не удалось отправить заявку. Попробуйте ещё раз чуть позже.' : 'Could not send your request. Please try again later.'
     },
     footer: ru ? 'Ваши решения создают легенду.' : 'Your choices create the legend.'
   };

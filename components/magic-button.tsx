@@ -2,13 +2,16 @@
 
 import Link from 'next/link';
 import {Sparkles} from 'lucide-react';
-import {HTMLAttributes} from 'react';
+import {AnchorHTMLAttributes, ButtonHTMLAttributes} from 'react';
 
-type MagicButtonProps = HTMLAttributes<HTMLAnchorElement | HTMLButtonElement> & {
-  href?: string;
+type CommonProps = {
   variant?: 'primary' | 'secondary';
   children: React.ReactNode;
 };
+
+type MagicButtonProps =
+  | (CommonProps & AnchorHTMLAttributes<HTMLAnchorElement> & {href: string})
+  | (CommonProps & ButtonHTMLAttributes<HTMLButtonElement> & {href?: undefined});
 
 export function MagicButton({href, variant = 'primary', children, className = '', ...props}: MagicButtonProps) {
   const classes = [
@@ -28,14 +31,14 @@ export function MagicButton({href, variant = 'primary', children, className = ''
 
   if (href) {
     return (
-      <Link href={href} className={classes} {...(props as HTMLAttributes<HTMLAnchorElement>)}>
+      <Link href={href} className={classes} {...(props as AnchorHTMLAttributes<HTMLAnchorElement>)}>
         {content}
       </Link>
     );
   }
 
   return (
-    <button className={classes} {...(props as HTMLAttributes<HTMLButtonElement>)}>
+    <button className={classes} {...(props as ButtonHTMLAttributes<HTMLButtonElement>)}>
       {content}
     </button>
   );

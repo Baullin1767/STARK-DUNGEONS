@@ -1,25 +1,21 @@
 'use client';
 
-import {useMemo, useState} from 'react';
+import {useState} from 'react';
 import {motion} from 'framer-motion';
 import {Dices} from 'lucide-react';
 import type {SiteData} from '@/data/site-data';
 import {MagicButton} from '@/components/magic-button';
 
 export function DiceRoller({data}: {data: SiteData}) {
-  const [roll, setRoll] = useState(20);
+  const [roll, setRoll] = useState(100);
   const [spinning, setSpinning] = useState(false);
 
-  const message = useMemo(() => {
-    if (roll === 20) return data.dice.natural20;
-    if (roll === 1) return data.dice.natural1;
-    return data.dice.messages[roll % data.dice.messages.length];
-  }, [data.dice, roll]);
+  const message = data.dice.messages[roll - 1];
 
   function rollDice() {
     setSpinning(true);
     window.setTimeout(() => {
-      setRoll(Math.floor(Math.random() * 20) + 1);
+      setRoll(Math.floor(Math.random() * 100) + 1);
       setSpinning(false);
     }, 520);
   }
@@ -32,9 +28,10 @@ export function DiceRoller({data}: {data: SiteData}) {
         <motion.div
           animate={spinning ? {rotate: 360, scale: [1, 1.12, 1]} : {rotate: 0, scale: 1}}
           transition={{duration: 0.5}}
-          className="mx-auto my-8 grid h-32 w-32 place-items-center clip-fantasy border border-gold/50 bg-ember text-6xl font-black text-gold shadow-glow"
+          className="mx-auto my-8 flex h-32 w-32 flex-col items-center justify-center clip-fantasy border border-gold/50 bg-ember font-black text-gold shadow-glow"
         >
-          {roll}
+          <span className="text-xs uppercase tracking-[0.28em] text-parchment/70">d100</span>
+          <span className="mt-1 text-6xl leading-none">{roll}</span>
         </motion.div>
         <p className="mx-auto mb-6 min-h-12 max-w-xl text-lg text-parchment">{message}</p>
         <MagicButton onClick={rollDice}>
