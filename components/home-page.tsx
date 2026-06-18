@@ -103,6 +103,21 @@ export function HomePage({data}: {locale: Locale; data: SiteData}) {
         </motion.div>
       </AnimatedSection>
 
+      <AnimatedSection className="py-20">
+        <SectionTitle title={data.officialAdventures.title} />
+        <p className="section-shell mt-5 max-w-4xl text-center text-base leading-7 text-ash">
+          {data.officialAdventures.subtitle}
+        </p>
+        <div className="section-shell mt-10 grid gap-5 md:grid-cols-3">
+          {data.officialAdventures.items.map(([title, description]) => (
+            <FantasyCard key={title}>
+              <h3 className="font-heading text-2xl text-bone">{title}</h3>
+              <p className="mt-4 text-sm leading-6 text-ash">{description}</p>
+            </FantasyCard>
+          ))}
+        </div>
+      </AnimatedSection>
+
       <WorldOfLux data={data.worldLux} />
 
       <AnimatedSection className="py-20">
@@ -128,7 +143,7 @@ export function HomePage({data}: {locale: Locale; data: SiteData}) {
         <p className="section-shell mt-4 text-center text-base text-ash">{data.pricingSubtitle}</p>
         <div className="section-shell mt-10 grid gap-5 md:grid-cols-2 xl:grid-cols-4">
           {data.pricing.map(([title, desc, price], index) => (
-            <FantasyCard key={title} className={index === 2 ? 'border-gold bg-gold/10' : ''}>
+            <FantasyCard key={title} className={index === 3 ? 'border-gold bg-gold/10' : ''}>
               <h3 className="font-heading text-3xl text-bone">{title}</h3>
               <p className="mt-4 min-h-24 text-sm leading-6 text-ash">{desc}</p>
               <p className="mt-7 font-heading text-4xl text-gold">{price}</p>
@@ -142,7 +157,7 @@ export function HomePage({data}: {locale: Locale; data: SiteData}) {
 
       <AnimatedSection className="py-20">
         <SectionTitle title={data.faqTitle} />
-        <div className="section-shell mt-10 grid gap-4 md:grid-cols-2">
+        <div className="section-shell mt-10 grid items-start gap-4 md:grid-cols-2">
           {data.faq.map(([question, answer]) => (
             <details key={question} className="group gold-border bg-ember/65 p-5">
               <summary className="flex cursor-pointer list-none items-center justify-between gap-4 font-heading text-xl text-bone">

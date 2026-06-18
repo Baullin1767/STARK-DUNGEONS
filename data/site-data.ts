@@ -45,12 +45,12 @@ export function getSiteData(locale: Locale) {
     altLocale: ru ? 'en' : 'ru',
     altHref: ru ? '/en' : '/',
     nav: ru
-      ? ['О мастере', 'Приключения', 'Форматы игр', 'Отзывы', 'Стоимость', 'Контакты']
-      : ['About', 'Campaigns', 'Formats', 'Reviews', 'Pricing', 'Contact'],
+      ? ['О мастере', 'Приключения', 'Форматы игр', 'Отзывы', 'Абонементы', 'Контакты']
+      : ['About', 'Campaigns', 'Formats', 'Reviews', 'Passes', 'Contact'],
     navIds: ['about', 'campaigns', 'formats', 'reviews', 'pricing', 'contact'],
     cta: ru ? 'Записаться' : 'Book a Session',
     hero: {
-      title: ru ? 'Ваши решения создают легенду' : 'Your choices create the legend',
+      title: ru ? 'Ваши решения создают историю' : 'Your choices create the story',
       subtitle: ru
         ? 'Погрузитесь в историю, где каждое решение имеет значение. Авторские кампании, атмосферные приключения и незабываемые персонажи для новичков и опытных игроков.'
         : 'Step into a story where every choice matters. Custom campaigns, cinematic adventures and unforgettable characters for both beginners and experienced players.',
@@ -74,19 +74,17 @@ export function getSiteData(locale: Locale) {
     servicesTitle: ru ? 'Форматы игр' : 'Game Formats',
     services: ru
       ? [
-          ['Ваншот для новичков', 'Мягкое введение в D&D с готовыми героями, ясными правилами и ярким финалом.', '3-4 часа', '3-5 игроков'],
+          ['Ваншот', 'Завершённое приключение на одну встречу для игроков с любым уровнем опыта.', '3-4 часа', '3-5 игроков'],
           ['Авторская кампания', 'Долгая история с личными арками, последствиями решений и живым миром.', '8+ сессий', '4-6 игроков'],
           ['Онлайн игра', 'Атмосферная сессия в Discord и виртуальном столе с картами и музыкой.', '3 часа', '3-6 игроков'],
           ['Корпоративное мероприятие', 'Командное приключение для события, тимбилдинга или творческого вечера.', '2-4 часа', '5-8 игроков'],
-          ['Частная группа', 'Игра под ваш жанр, темп и опыт участников.', 'Гибко', '2-6 игроков'],
           ['Подарочный сертификат', 'Персональный квест в подарок другу, паре или компании.', 'На выбор', '2-6 игроков']
         ]
       : [
-          ['Beginner One-Shot', 'A friendly D&D introduction with ready heroes, clear rules and a memorable finale.', '3-4 hours', '3-5 players'],
+          ['One-Shot', 'A complete one-session adventure for players of any experience level.', '3-4 hours', '3-5 players'],
           ['Custom Campaign', 'A long-form story with personal arcs, choice consequences and a living world.', '8+ sessions', '4-6 players'],
           ['Online Adventure', 'An atmospheric Discord and virtual tabletop session with maps and music.', '3 hours', '3-6 players'],
           ['Corporate Event', 'A collaborative adventure for events, team building or creative evenings.', '2-4 hours', '5-8 players'],
-          ['Private Group', 'A game shaped around your genre, pace and player experience.', 'Flexible', '2-6 players'],
           ['Gift Session', 'A personal quest as a gift for a friend, couple or group.', 'Custom', '2-6 players']
         ],
     serviceCta: ru ? 'Выбрать формат' : 'Choose Format',
@@ -135,6 +133,23 @@ export function getSiteData(locale: Locale) {
         description: copy[index][3]
       };
     }),
+    officialAdventures: {
+      title: ru ? 'Готовые приключения D&D' : 'Official D&D Adventures',
+      subtitle: ru
+        ? 'Помимо авторских историй, я вожу готовые приключения Dungeons & Dragons — могу провести кампанию по книге или адаптировать её под состав и стиль вашей группы.'
+        : 'Alongside original stories, I run published Dungeons & Dragons adventures and can adapt each campaign to your group and preferred play style.',
+      items: ru
+        ? [
+            ['Поворот Колеса Фортуны', 'Планарное приключение по Сигилу и Мультивселенной, где героям предстоит вернуть утраченную судьбу.'],
+            ['Проклятие Страда', 'Готический хоррор в туманной Баровии с замком Равенлофт и легендарным вампиром Страдом фон Заровичем.'],
+            ['Врата Балдура: Нисхождение в Авернус', 'Мрачное путешествие из Врат Балдура в первый круг Девяти Преисподних среди демонов, дьяволов и адских машин.']
+          ]
+        : [
+            ['Turn of Fortune’s Wheel', 'A planar adventure through Sigil and the Multiverse where the heroes must reclaim their lost destiny.'],
+            ['Curse of Strahd', 'Gothic horror in mist-shrouded Barovia, featuring Castle Ravenloft and the legendary vampire Strahd von Zarovich.'],
+            ['Baldur’s Gate: Descent into Avernus', 'A dark journey from Baldur’s Gate into the first layer of the Nine Hells, filled with devils, demons and infernal machines.']
+          ]
+    },
     worldLux: {
       title: ru ? 'Мир Лукс' : 'World of Lux',
       paragraphs: ru
@@ -175,22 +190,22 @@ export function getSiteData(locale: Locale) {
           ['Ilya', 'The NPCs felt alive, combat was tense, and our choices caught up with us sessions later.'],
           ['Anna', 'The best corporate adventure: everyone joined in, laughed and argued like a real party.']
         ],
-    pricingTitle: ru ? 'Стоимость участия' : 'Participation Pricing',
+    pricingTitle: ru ? 'Абонементы' : 'Session Passes',
     pricingSubtitle: ru
-      ? 'Можно записаться одному или готовой группой — недостающих игроков я помогу найти.'
-      : 'Join individually or as a ready-made group — I can help find the remaining players.',
+      ? 'Чем больше приключений впереди, тем выгоднее каждая сессия. Абонемент оформляется на одного игрока.'
+      : 'The more adventures ahead, the better the price per session. Each pass is for one player.',
     pricing: ru
       ? [
-          ['3 игрока', 'Сессия длится 3 часа, после игры — ещё 30 минут на обсуждение и обратную связь.', '2 000 ₽ / игрок'],
-          ['4 игрока', 'Сессия длится 3 часа, после игры — ещё 30 минут на обсуждение и обратную связь.', '1 700 ₽ / игрок'],
-          ['5 игроков', 'Сессия длится 3 часа, после игры — ещё 30 минут на обсуждение и обратную связь.', '1 500 ₽ / игрок'],
-          ['6 игроков', 'Сессия увеличивается до 4 часов, после игры — ещё 30 минут на обсуждение и обратную связь.', '1 500 ₽ / игрок']
+          ['Странник', '2 сессии без скидки. Подойдёт, чтобы познакомиться с миром и начать небольшое приключение.', '3 000 ₽ · 1 500 ₽ / сессия'],
+          ['Искатель', '4 сессии со скидкой 7%. Хороший старт для сюжетной арки или мини-кампании.', '5 600 ₽ · 1 400 ₽ / сессия'],
+          ['Герой', '8 сессий со скидкой 17%. Для полноценной кампании и регулярных встреч.', '10 000 ₽ · 1 250 ₽ / сессия'],
+          ['Легенда', '12 сессий со скидкой 33%. Максимальная выгода для долгого большого приключения.', '12 000 ₽ · 1 000 ₽ / сессия']
         ]
       : [
-          ['3 players', 'A 3-hour session followed by 30 minutes for discussion and feedback.', '2,000 ₽ / player'],
-          ['4 players', 'A 3-hour session followed by 30 minutes for discussion and feedback.', '1,700 ₽ / player'],
-          ['5 players', 'A 3-hour session followed by 30 minutes for discussion and feedback.', '1,500 ₽ / player'],
-          ['6 players', 'The session is extended to 4 hours, followed by 30 minutes for discussion and feedback.', '1,500 ₽ / player']
+          ['Wanderer', '2 sessions at the standard rate. A simple way to discover the world and begin a short adventure.', '3,000 ₽ · 1,500 ₽ / session'],
+          ['Seeker', '4 sessions with a 7% discount. A strong start for a story arc or mini-campaign.', '5,600 ₽ · 1,400 ₽ / session'],
+          ['Hero', '8 sessions with a 17% discount. Built for a full campaign and regular play.', '10,000 ₽ · 1,250 ₽ / session'],
+          ['Legend', '12 sessions with a 33% discount. The best value for a long-form adventure.', '12,000 ₽ · 1,000 ₽ / session']
         ],
     faqTitle: 'FAQ',
     faq: ru
@@ -219,6 +234,6 @@ export function getSiteData(locale: Locale) {
       success: ru ? 'Заявка отправлена. Скоро я напишу вам в Telegram.' : 'Your request has been sent. I will message you on Telegram soon.',
       error: ru ? 'Не удалось отправить заявку. Попробуйте ещё раз чуть позже.' : 'Could not send your request. Please try again later.'
     },
-    footer: ru ? 'Ваши решения создают легенду.' : 'Your choices create the legend.'
+    footer: ru ? 'Ваши решения создают историю' : 'Your choices create the story'
   };
 }
