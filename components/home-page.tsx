@@ -1,7 +1,7 @@
 'use client';
 
 import {useState} from 'react';
-import {AnimatePresence, motion} from 'framer-motion';
+import {motion} from 'framer-motion';
 import Image from 'next/image';
 import {ChevronDown, Gem, Mail, Map, ScrollText, Shield, Swords} from 'lucide-react';
 import type {Locale, SiteData} from '@/data/site-data';
@@ -95,11 +95,9 @@ export function HomePage({data}: {locale: Locale; data: SiteData}) {
           ))}
         </div>
         <motion.div layout className="section-shell mt-10 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
-          <AnimatePresence mode="popLayout">
-            {filteredCampaigns.map((campaign) => (
-              <CampaignCard key={campaign.id} campaign={campaign} />
-            ))}
-          </AnimatePresence>
+          {filteredCampaigns.map((campaign) => (
+            <CampaignCard key={campaign.id} campaign={campaign} />
+          ))}
         </motion.div>
       </AnimatedSection>
 
@@ -191,7 +189,7 @@ export function HomePage({data}: {locale: Locale; data: SiteData}) {
             </p>
             <p className="mt-2 text-sm text-ash">{data.footer}</p>
           </div>
-          <p className="text-sm text-ash">© 2026 Alexander Starkov</p>
+          <p className="text-sm text-ash">© 2026 Alexandr Starkov</p>
         </div>
       </footer>
 

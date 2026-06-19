@@ -6,7 +6,7 @@ export function FantasyCard({
   className?: string;
 }) {
   return (
-    <div className={`clip-fantasy gold-border bg-ember/78 p-5 shadow-glow backdrop-blur-sm ${className}`}>
+    <div className={`clip-fantasy gold-border bg-ember/80 p-5 shadow-glow backdrop-blur-sm ${className}`}>
       {children}
     </div>
   );

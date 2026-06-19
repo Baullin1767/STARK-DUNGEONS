@@ -17,3 +17,29 @@
  GET / 200 in 161ms
  GET / 200 in 138ms
  GET / 200 in 103ms
+ GET / 200 in 142ms
+ ✓ Compiled in 1281ms (1587 modules)
+ GET / 200 in 112ms
+ GET / 200 in 231ms
+ GET / 200 in 22ms
+ ✓ Compiled in 442ms (1587 modules)
+ GET / 200 in 118ms
+ GET / 200 in 265ms
+ ✓ Compiled in 358ms (1587 modules)
+ GET / 200 in 116ms
+ GET / 200 in 234ms
+ ✓ Compiled in 245ms (1587 modules)
+ GET / 200 in 113ms
+ GET / 200 in 170ms
+ ✓ Compiled in 444ms (1587 modules)
+ GET / 200 in 160ms
+ ✓ Compiled in 349ms (1587 modules)
+ GET / 200 in 118ms
+ ✓ Compiled in 218ms (1587 modules)
+ GET / 200 in 77ms
+ ✓ Compiled in 335ms (1587 modules)
+ ✓ Compiled in 252ms (1587 modules)
+ ✓ Compiled in 296ms (1587 modules)
+ ✓ Compiled in 301ms (1587 modules)
+ ✓ Compiled in 355ms (1587 modules)
+ ✓ Compiled in 284ms (1587 modules)
