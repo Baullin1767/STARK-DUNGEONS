@@ -144,7 +144,14 @@ export function HomePage({data}: {locale: Locale; data: SiteData}) {
             <FantasyCard key={title} className={index === 3 ? 'border-gold bg-gold/10' : ''}>
               <h3 className="font-heading text-3xl text-bone">{title}</h3>
               <p className="mt-4 min-h-24 text-sm leading-6 text-ash">{desc}</p>
-              <p className="mt-7 font-heading text-4xl text-gold">{price}</p>
+              <p className="mt-7 flex flex-wrap items-baseline gap-x-2 gap-y-1 font-heading text-3xl text-gold 2xl:text-4xl">
+                {price.split('·').map((part, partIndex) => (
+                  <span key={part} className="whitespace-nowrap">
+                    {partIndex > 0 && <span aria-hidden="true">· </span>}
+                    {part.trim()}
+                  </span>
+                ))}
+              </p>
               <MagicButton href="#contact" className="mt-7 w-full">
                 {data.cta}
               </MagicButton>

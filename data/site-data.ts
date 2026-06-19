@@ -228,13 +228,13 @@ export function getSiteData(locale: Locale) {
       : 'The more adventures ahead, the better the price per session. Each pass is for one player.',
     pricing: ru
       ? [
-          ['Странник', '2 сессии без скидки. Подойдёт, чтобы познакомиться с миром и начать небольшое приключение.', '3 000 ₽ · 1 500 ₽ / сессия'],
+          ['Странник', 'Оплата одной сессии. Хватит для ваншота, знакомства с форматом игры и мастером.', '1 500 ₽ · 1 сессия'],
           ['Искатель', '4 сессии со скидкой 7%. Хороший старт для сюжетной арки или мини-кампании.', '5 600 ₽ · 1 400 ₽ / сессия'],
           ['Герой', '8 сессий со скидкой 17%. Для полноценной кампании и регулярных встреч.', '10 000 ₽ · 1 250 ₽ / сессия'],
           ['Легенда', '12 сессий со скидкой 33%. Максимальная выгода для долгого большого приключения.', '12 000 ₽ · 1 000 ₽ / сессия']
         ]
       : [
-          ['Wanderer', '2 sessions at the standard rate. A simple way to discover the world and begin a short adventure.', '3,000 ₽ · 1,500 ₽ / session'],
+          ['Wanderer', 'Payment for one session. Enough for a one-shot and a chance to discover the game format and meet the Dungeon Master.', '1,500 ₽ · 1 session'],
           ['Seeker', '4 sessions with a 7% discount. A strong start for a story arc or mini-campaign.', '5,600 ₽ · 1,400 ₽ / session'],
           ['Hero', '8 sessions with a 17% discount. Built for a full campaign and regular play.', '10,000 ₽ · 1,250 ₽ / session'],
           ['Legend', '12 sessions with a 33% discount. The best value for a long-form adventure.', '12,000 ₽ · 1,000 ₽ / session']
@@ -243,13 +243,13 @@ export function getSiteData(locale: Locale) {
     faq: ru
       ? [
           ['Нужен ли опыт игры?', 'Нет. Я объясню правила через действие и помогу создать героя.'],
-          ['Можно ли играть онлайн?', 'Да. Провожу игры в Discord и на виртуальных столах.'],
+          ['Можно ли играть онлайн?', 'Да. Провожу игры в Discord и на Foundry VTT.'],
           ['Сколько длится сессия?', 'Для 3-5 игроков — 3 часа, для 6 игроков — 4 часа. После игры предусмотрено ещё 30 минут на обсуждение и обратную связь.'],
           ['Сколько игроков может участвовать?', 'Оптимально 3-6 игроков, для событий можно больше.']
         ]
       : [
           ['Do I need previous experience?', 'No. I teach the rules through play and help with character creation.'],
-          ['Can we play online?', 'Yes. I run sessions in Discord and virtual tabletops.'],
+          ['Can we play online?', 'Yes. I run sessions in Discord and Foundry VTT.'],
           ['How long is a session?', 'Sessions last 3 hours for 3-5 players and 4 hours for 6 players, plus 30 minutes for discussion and feedback.'],
           ['How many players can join?', 'The sweet spot is 3-6 players, with larger event formats available.']
         ],
