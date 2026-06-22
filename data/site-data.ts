@@ -101,24 +101,24 @@ export function getSiteData(locale: Locale) {
         ? ['Кинематографичные истории', 'Тактические сражения', 'Отыгрыш персонажей', 'Кампании с последствиями выбора']
         : ['Cinematic storytelling', 'Tactical encounters', 'Character-driven adventures', 'Choice-driven campaigns'],
       stats: ru
-        ? ['Онлайн и офлайн', 'RU / EN', 'Ваншоты и кампании', 'Тёмное фэнтези, мистика, драма']
-        : ['Online and offline', 'RU / EN', 'One-shots and campaigns', 'Dark fantasy, mystery, drama']
+        ? ['Онлайн и офлайн', 'Ваншоты и кампании', 'Тёмное фэнтези, мистика, героическое фэнтези']
+        : ['Online and offline', 'One-shots and campaigns', 'Dark fantasy, mystery, heroic fantasy']
     },
     servicesTitle: ru ? 'Форматы игр' : 'Game Formats',
     services: ru
       ? [
           ['Ваншот', 'Завершённое приключение на одну встречу для игроков с любым уровнем опыта.', '3-4 часа', '3-5 игроков'],
-          ['Авторская кампания', 'Долгая история с личными арками, последствиями решений и живым миром.', '8+ сессий', '4-6 игроков'],
-          ['Онлайн игра', 'Атмосферная сессия в Discord и виртуальном столе с картами и музыкой.', '3 часа', '3-6 игроков'],
+          ['Авторская кампания', 'Долгая история с личными арками, последствиями решений и живым миром.', '8+ сессий', '4-5 игроков'],
+          ['Онлайн игра', 'Атмосферная сессия в Discord и виртуальном столе с картами и музыкой.', '3 часа', '3-5 игроков'],
           ['Корпоративное мероприятие', 'Командное приключение для события, тимбилдинга или творческого вечера.', '2-4 часа', '5-8 игроков'],
-          ['Подарочный сертификат', 'Персональный квест в подарок другу, паре или компании.', 'На выбор', '2-6 игроков']
+          ['Подарочный сертификат', 'Персональный квест в подарок другу, паре или компании.', 'На выбор', '2-5 игроков']
         ]
       : [
           ['One-Shot', 'A complete one-session adventure for players of any experience level.', '3-4 hours', '3-5 players'],
-          ['Custom Campaign', 'A long-form story with personal arcs, choice consequences and a living world.', '8+ sessions', '4-6 players'],
-          ['Online Adventure', 'An atmospheric Discord and virtual tabletop session with maps and music.', '3 hours', '3-6 players'],
+          ['Custom Campaign', 'A long-form story with personal arcs, choice consequences and a living world.', '8+ sessions', '4-5 players'],
+          ['Online Adventure', 'An atmospheric Discord and virtual tabletop session with maps and music.', '3 hours', '3-5 players'],
           ['Corporate Event', 'A collaborative adventure for events, team building or creative evenings.', '2-4 hours', '5-8 players'],
-          ['Gift Session', 'A personal quest as a gift for a friend, couple or group.', 'Custom', '2-6 players']
+          ['Gift Session', 'A personal quest as a gift for a friend, couple or group.', 'Custom', '2-5 players']
         ],
     serviceCta: ru ? 'Выбрать формат' : 'Choose Format',
     campaignsTitle: ru ? 'Портфолио приключений' : 'Campaign Portfolio',
@@ -245,13 +245,13 @@ export function getSiteData(locale: Locale) {
           ['Нужен ли опыт игры?', 'Нет. Я объясню правила через действие и помогу создать героя.'],
           ['Можно ли играть онлайн?', 'Да. Провожу игры в Discord и на Foundry VTT.'],
           ['Сколько длится сессия?', 'Для 3-5 игроков — 3 часа, для 6 игроков — 4 часа. После игры предусмотрено ещё 30 минут на обсуждение и обратную связь.'],
-          ['Сколько игроков может участвовать?', 'Оптимально 3-6 игроков, для событий можно больше.']
+          ['Сколько игроков может участвовать?', 'Оптимально 3-5 игроков, для событий можно больше.']
         ]
       : [
           ['Do I need previous experience?', 'No. I teach the rules through play and help with character creation.'],
           ['Can we play online?', 'Yes. I run sessions in Discord and Foundry VTT.'],
           ['How long is a session?', 'Sessions last 3 hours for 3-5 players and 4 hours for 6 players, plus 30 minutes for discussion and feedback.'],
-          ['How many players can join?', 'The sweet spot is 3-6 players, with larger event formats available.']
+          ['How many players can join?', 'The sweet spot is 3-5 players, with larger event formats available.']
         ],
     booking: {
       title: ru ? 'Хотите присоединиться к игре?' : 'Want to join a game?',

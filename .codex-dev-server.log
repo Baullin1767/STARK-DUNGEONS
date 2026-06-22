@@ -1,0 +1,29 @@
+
+> stark-dungeons@0.1.0 dev
+> next dev
+
+   ▲ Next.js 15.5.19
+   - Local:        http://localhost:3000
+   - Network:      http://192.168.1.43:3000
+   - Environments: .env
+
+ ✓ Starting...
+ ✓ Ready in 1429ms
+ ✓ Compiled /middleware in 364ms (145 modules)
+ ○ Compiling /[locale] ...
+ ✓ Compiled /[locale] in 3.7s (1627 modules)
+ GET / 200 in 3844ms
+ GET / 200 in 3104ms
+ GET / 200 in 950ms
+ ✓ Compiled /favicon.ico in 327ms (929 modules)
+ GET /favicon.ico 200 in 418ms
+ ✓ Compiled in 366ms (1609 modules)
+ GET / 200 in 132ms
+ ✓ Compiled /favicon.ico in 87ms (929 modules)
+ GET /favicon.ico 200 in 176ms
+ GET /favicon.ico 200 in 8ms
+ GET / 200 in 74ms
+ ✓ Compiled in 399ms (1609 modules)
+ GET / 200 in 186ms
+ ✓ Compiled /api/booking in 157ms (1615 modules)
+ POST /api/booking 200 in 454ms

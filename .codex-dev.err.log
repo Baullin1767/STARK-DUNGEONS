@@ -1,2 +1,170 @@
  ⚠ Fast Refresh had to perform a full reload due to a runtime error.
  ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+ ⨯ Error: ENOENT: no such file or directory, open 'D:\WebDev\STARK-DUNGEONS\.next\server\vendor-chunks\next.js'
+    at <unknown> (D:\WebDev\STARK-DUNGEONS\.next\server\app\_not-found\page.js:249:47)
+    at Object.<anonymous> (D:\WebDev\STARK-DUNGEONS\.next\server\app\_not-found\page.js:252:3) {
+  errno: -4058,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: 'D:\\WebDev\\STARK-DUNGEONS\\.next\\server\\vendor-chunks\\next.js'
+}
+ ⚠ Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+ ⨯ Failed to generate static paths for /[locale]:
+[Error: Cannot find module './vendor-chunks/next.js'
+Require stack:
+- D:\WebDev\STARK-DUNGEONS\.next\server\webpack-runtime.js
+- D:\WebDev\STARK-DUNGEONS\.next\server\app\[locale]\page.js
+- D:\WebDev\STARK-DUNGEONS\node_modules\next\dist\server\require.js
+- D:\WebDev\STARK-DUNGEONS\node_modules\next\dist\server\load-components.js
+- D:\WebDev\STARK-DUNGEONS\node_modules\next\dist\build\utils.js
+- D:\WebDev\STARK-DUNGEONS\node_modules\next\dist\server\dev\static-paths-worker.js
+- D:\WebDev\STARK-DUNGEONS\node_modules\next\dist\compiled\jest-worker\processChild.js] {
+  type: 'Error',
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [Array]
+}
+ ⨯ Error: Cannot find module './331.js'
+Require stack:
+- D:\WebDev\STARK-DUNGEONS\.next\server\webpack-runtime.js
+- D:\WebDev\STARK-DUNGEONS\.next\server\app\[locale]\page.js
+- D:\WebDev\STARK-DUNGEONS\node_modules\next\dist\server\require.js
+- D:\WebDev\STARK-DUNGEONS\node_modules\next\dist\server\load-components.js
+- D:\WebDev\STARK-DUNGEONS\node_modules\next\dist\build\utils.js
+- D:\WebDev\STARK-DUNGEONS\node_modules\next\dist\build\swc\options.js
+- D:\WebDev\STARK-DUNGEONS\node_modules\next\dist\build\swc\index.js
+- D:\WebDev\STARK-DUNGEONS\node_modules\next\dist\build\analysis\parse-module.js
+- D:\WebDev\STARK-DUNGEONS\node_modules\next\dist\build\analysis\get-page-static-info.js
+- D:\WebDev\STARK-DUNGEONS\node_modules\next\dist\server\lib\router-utils\setup-dev-bundler.js
+- D:\WebDev\STARK-DUNGEONS\node_modules\next\dist\server\lib\router-server.js
+- D:\WebDev\STARK-DUNGEONS\node_modules\next\dist\server\lib\start-server.js
+    at <unknown> (D:\WebDev\STARK-DUNGEONS\.next\server\app\favicon.ico\route.js:1:17642)
+    at Object.<anonymous> (D:\WebDev\STARK-DUNGEONS\.next\server\app\favicon.ico\route.js:1:17692) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [Array],
+  page: '/favicon.ico'
+}
+ ⨯ Error: Cannot find module './331.js'
+Require stack:
+- D:\WebDev\STARK-DUNGEONS\.next\server\webpack-runtime.js
+- D:\WebDev\STARK-DUNGEONS\.next\server\app\[locale]\page.js
+- D:\WebDev\STARK-DUNGEONS\node_modules\next\dist\server\require.js
+- D:\WebDev\STARK-DUNGEONS\node_modules\next\dist\server\load-components.js
+- D:\WebDev\STARK-DUNGEONS\node_modules\next\dist\build\utils.js
+- D:\WebDev\STARK-DUNGEONS\node_modules\next\dist\build\swc\options.js
+- D:\WebDev\STARK-DUNGEONS\node_modules\next\dist\build\swc\index.js
+- D:\WebDev\STARK-DUNGEONS\node_modules\next\dist\build\analysis\parse-module.js
+- D:\WebDev\STARK-DUNGEONS\node_modules\next\dist\build\analysis\get-page-static-info.js
+- D:\WebDev\STARK-DUNGEONS\node_modules\next\dist\server\lib\router-utils\setup-dev-bundler.js
+- D:\WebDev\STARK-DUNGEONS\node_modules\next\dist\server\lib\router-server.js
+- D:\WebDev\STARK-DUNGEONS\node_modules\next\dist\server\lib\start-server.js
+    at <unknown> (D:\WebDev\STARK-DUNGEONS\.next\server\app\favicon.ico\route.js:1:17642)
+    at Object.<anonymous> (D:\WebDev\STARK-DUNGEONS\.next\server\app\favicon.ico\route.js:1:17692) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [Array],
+  page: '/favicon.ico'
+}
+ ⨯ [Error: Cannot find module './vendor-chunks/next.js'
+Require stack:
+- D:\WebDev\STARK-DUNGEONS\.next\server\webpack-runtime.js
+- D:\WebDev\STARK-DUNGEONS\.next\server\app\[locale]\page.js
+- D:\WebDev\STARK-DUNGEONS\node_modules\next\dist\server\require.js
+- D:\WebDev\STARK-DUNGEONS\node_modules\next\dist\server\load-components.js
+- D:\WebDev\STARK-DUNGEONS\node_modules\next\dist\build\utils.js
+- D:\WebDev\STARK-DUNGEONS\node_modules\next\dist\server\dev\static-paths-worker.js
+- D:\WebDev\STARK-DUNGEONS\node_modules\next\dist\compiled\jest-worker\processChild.js] {
+  type: 'Error',
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [Array],
+  page: '/ru'
+}
+ ⨯ Error: Cannot find module './611.js'
+Require stack:
+- D:\WebDev\STARK-DUNGEONS\.next\server\webpack-runtime.js
+- D:\WebDev\STARK-DUNGEONS\.next\server\pages\_document.js
+- D:\WebDev\STARK-DUNGEONS\node_modules\next\dist\server\require.js
+- D:\WebDev\STARK-DUNGEONS\node_modules\next\dist\server\load-components.js
+- D:\WebDev\STARK-DUNGEONS\node_modules\next\dist\build\utils.js
+- D:\WebDev\STARK-DUNGEONS\node_modules\next\dist\build\swc\options.js
+- D:\WebDev\STARK-DUNGEONS\node_modules\next\dist\build\swc\index.js
+- D:\WebDev\STARK-DUNGEONS\node_modules\next\dist\build\analysis\parse-module.js
+- D:\WebDev\STARK-DUNGEONS\node_modules\next\dist\build\analysis\get-page-static-info.js
+- D:\WebDev\STARK-DUNGEONS\node_modules\next\dist\server\lib\router-utils\setup-dev-bundler.js
+- D:\WebDev\STARK-DUNGEONS\node_modules\next\dist\server\lib\router-server.js
+- D:\WebDev\STARK-DUNGEONS\node_modules\next\dist\server\lib\start-server.js
+    at <unknown> (D:\WebDev\STARK-DUNGEONS\.next\server\pages\_document.js:1:325)
+    at Object.<anonymous> (D:\WebDev\STARK-DUNGEONS\.next\server\pages\_document.js:1:371) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [Array]
+}
+[TypeError: Cannot read properties of undefined (reading '/_app')]
+ ⨯ [TypeError: Cannot read properties of undefined (reading '/_app')]
+[Error: Cannot find module './vendor-chunks/next.js'
+Require stack:
+- D:\WebDev\STARK-DUNGEONS\.next\server\webpack-runtime.js
+- D:\WebDev\STARK-DUNGEONS\.next\server\app\[locale]\page.js
+- D:\WebDev\STARK-DUNGEONS\node_modules\next\dist\server\require.js
+- D:\WebDev\STARK-DUNGEONS\node_modules\next\dist\server\load-components.js
+- D:\WebDev\STARK-DUNGEONS\node_modules\next\dist\build\utils.js
+- D:\WebDev\STARK-DUNGEONS\node_modules\next\dist\server\dev\static-paths-worker.js
+- D:\WebDev\STARK-DUNGEONS\node_modules\next\dist\compiled\jest-worker\processChild.js] {
+  type: 'Error',
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [Array],
+  page: '/ru'
+}
+ ⨯ Error: Cannot find module './611.js'
+Require stack:
+- D:\WebDev\STARK-DUNGEONS\.next\server\webpack-runtime.js
+- D:\WebDev\STARK-DUNGEONS\.next\server\pages\_document.js
+- D:\WebDev\STARK-DUNGEONS\node_modules\next\dist\server\require.js
+- D:\WebDev\STARK-DUNGEONS\node_modules\next\dist\server\load-components.js
+- D:\WebDev\STARK-DUNGEONS\node_modules\next\dist\build\utils.js
+- D:\WebDev\STARK-DUNGEONS\node_modules\next\dist\build\swc\options.js
+- D:\WebDev\STARK-DUNGEONS\node_modules\next\dist\build\swc\index.js
+- D:\WebDev\STARK-DUNGEONS\node_modules\next\dist\build\analysis\parse-module.js
+- D:\WebDev\STARK-DUNGEONS\node_modules\next\dist\build\analysis\get-page-static-info.js
+- D:\WebDev\STARK-DUNGEONS\node_modules\next\dist\server\lib\router-utils\setup-dev-bundler.js
+- D:\WebDev\STARK-DUNGEONS\node_modules\next\dist\server\lib\router-server.js
+- D:\WebDev\STARK-DUNGEONS\node_modules\next\dist\server\lib\start-server.js
+    at <unknown> (D:\WebDev\STARK-DUNGEONS\.next\server\pages\_document.js:1:325)
+    at Object.<anonymous> (D:\WebDev\STARK-DUNGEONS\.next\server\pages\_document.js:1:371) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [Array]
+}
+[TypeError: Cannot read properties of undefined (reading '/_app')]
+ ⨯ [TypeError: Cannot read properties of undefined (reading '/_app')]
+[TypeError: Cannot read properties of undefined (reading '/_app')]
+ ⨯ Error: Cannot find module './331.js'
+Require stack:
+- D:\WebDev\STARK-DUNGEONS\.next\server\webpack-runtime.js
+- D:\WebDev\STARK-DUNGEONS\.next\server\pages\_document.js
+- D:\WebDev\STARK-DUNGEONS\node_modules\next\dist\server\require.js
+- D:\WebDev\STARK-DUNGEONS\node_modules\next\dist\server\load-components.js
+- D:\WebDev\STARK-DUNGEONS\node_modules\next\dist\build\utils.js
+- D:\WebDev\STARK-DUNGEONS\node_modules\next\dist\build\swc\options.js
+- D:\WebDev\STARK-DUNGEONS\node_modules\next\dist\build\swc\index.js
+- D:\WebDev\STARK-DUNGEONS\node_modules\next\dist\build\analysis\parse-module.js
+- D:\WebDev\STARK-DUNGEONS\node_modules\next\dist\build\analysis\get-page-static-info.js
+- D:\WebDev\STARK-DUNGEONS\node_modules\next\dist\server\lib\router-utils\setup-dev-bundler.js
+- D:\WebDev\STARK-DUNGEONS\node_modules\next\dist\server\lib\router-server.js
+- D:\WebDev\STARK-DUNGEONS\node_modules\next\dist\server\lib\start-server.js
+    at <unknown> (D:\WebDev\STARK-DUNGEONS\.next\server\app\favicon.ico\route.js:1:17642)
+    at Object.<anonymous> (D:\WebDev\STARK-DUNGEONS\.next\server\app\favicon.ico\route.js:1:17692) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [Array],
+  page: '/favicon.ico'
+}
+ ⨯ [Error: Cannot find module './vendor-chunks/motion-dom.js'
+Require stack:
+- D:\WebDev\STARK-DUNGEONS\.next\server\webpack-runtime.js
+- D:\WebDev\STARK-DUNGEONS\.next\server\app\[locale]\page.js
+- D:\WebDev\STARK-DUNGEONS\node_modules\next\dist\server\require.js
+- D:\WebDev\STARK-DUNGEONS\node_modules\next\dist\server\load-components.js
+- D:\WebDev\STARK-DUNGEONS\node_modules\next\dist\build\utils.js
+- D:\WebDev\STARK-DUNGEONS\node_modules\next\dist\server\dev\static-paths-worker.js
+- D:\WebDev\STARK-DUNGEONS\node_modules\next\dist\compiled\jest-worker\processChild.js] {
+  type: 'Error',
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [Array],
+  page: '/ru'
+}
