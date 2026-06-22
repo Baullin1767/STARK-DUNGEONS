@@ -224,8 +224,8 @@ export function getSiteData(locale: Locale) {
         ],
     pricingTitle: ru ? 'Абонементы' : 'Session Passes',
     pricingSubtitle: ru
-      ? 'Базовая стоимость — 1 000 ₽ за сессию. Абонементы дают скидку независимо от размера партии.'
-      : 'The base price is 1,000 ₽ per session. Passes provide a discount regardless of party size.',
+      ? 'Базовая стоимость — 1 000 ₽ за сессию.'
+      : 'The base price is 1,000 ₽ per session.',
     pricing: ru
       ? [
           ['Странник', 'Разовая сессия без абонемента. Подойдёт для ваншота или знакомства с форматом игры и мастером.', '1 000 ₽ · 1 сессия'],
