@@ -224,20 +224,20 @@ export function getSiteData(locale: Locale) {
         ],
     pricingTitle: ru ? 'Абонементы' : 'Session Passes',
     pricingSubtitle: ru
-      ? 'Чем больше приключений впереди, тем выгоднее каждая сессия. Абонемент оформляется на одного игрока.'
-      : 'The more adventures ahead, the better the price per session. Each pass is for one player.',
+      ? 'Базовая стоимость — 1 000 ₽ за сессию. Абонементы дают скидку независимо от размера партии.'
+      : 'The base price is 1,000 ₽ per session. Passes provide a discount regardless of party size.',
     pricing: ru
       ? [
-          ['Странник', 'Оплата одной сессии. Хватит для ваншота, знакомства с форматом игры и мастером.', '1 500 ₽ · 1 сессия'],
-          ['Искатель', '4 сессии со скидкой 7%. Хороший старт для сюжетной арки или мини-кампании.', '5 600 ₽ · 1 400 ₽ / сессия'],
-          ['Герой', '8 сессий со скидкой 17%. Для полноценной кампании и регулярных встреч.', '10 000 ₽ · 1 250 ₽ / сессия'],
-          ['Легенда', '12 сессий со скидкой 33%. Максимальная выгода для долгого большого приключения.', '12 000 ₽ · 1 000 ₽ / сессия']
+          ['Странник', 'Разовая сессия без абонемента. Подойдёт для ваншота или знакомства с форматом игры и мастером.', '1 000 ₽ · 1 сессия'],
+          ['Искатель', 'Абонемент на 4 сессии со скидкой 10%. Хороший старт для сюжетной арки или мини-кампании.', '3 600 ₽ · 900 ₽ / сессия'],
+          ['Герой', 'Абонемент на 8 сессий со скидкой 20%. Для полноценной кампании и регулярных встреч.', '6 400 ₽ · 800 ₽ / сессия'],
+          ['Легенда', 'Абонемент на 12 сессий со скидкой 30%. Максимальная выгода: 700 ₽ за сессию.', '8 400 ₽ · 700 ₽ / сессия']
         ]
       : [
-          ['Wanderer', 'Payment for one session. Enough for a one-shot and a chance to discover the game format and meet the Dungeon Master.', '1,500 ₽ · 1 session'],
-          ['Seeker', '4 sessions with a 7% discount. A strong start for a story arc or mini-campaign.', '5,600 ₽ · 1,400 ₽ / session'],
-          ['Hero', '8 sessions with a 17% discount. Built for a full campaign and regular play.', '10,000 ₽ · 1,250 ₽ / session'],
-          ['Legend', '12 sessions with a 33% discount. The best value for a long-form adventure.', '12,000 ₽ · 1,000 ₽ / session']
+          ['Wanderer', 'A single session without a pass. Ideal for a one-shot or an introduction to the format and Dungeon Master.', '1,000 ₽ · 1 session'],
+          ['Seeker', 'A 4-session pass with a 10% discount. A strong start for a story arc or mini-campaign.', '3,600 ₽ · 900 ₽ / session'],
+          ['Hero', 'An 8-session pass with a 20% discount. Built for a full campaign and regular play.', '6,400 ₽ · 800 ₽ / session'],
+          ['Legend', 'A 12-session pass with a 30% discount. The best value at 700 ₽ per session.', '8,400 ₽ · 700 ₽ / session']
         ],
     faqTitle: 'FAQ',
     faq: ru
