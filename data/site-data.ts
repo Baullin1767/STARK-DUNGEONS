@@ -94,8 +94,8 @@ export function getSiteData(locale: Locale) {
       title: 'Alexandr Starkov',
       role: ru ? 'Dungeon Master и рассказчик' : 'Dungeon Master & Storyteller',
       intro: ru
-        ? 'Провожу кампании и ваншоты, в которых решения игроков действительно меняют мир. Люблю сочетать атмосферный отыгрыш, моральные выборы, исследования и тактические сражения.'
-        : 'I run campaigns and one-shots where player decisions genuinely shape the world. My games combine roleplay, exploration, meaningful choices and tactical combat.',
+        ? 'Провожу кампании и ваншоты, в которых решения игроков меняют мир. Люблю сочетать атмосферный отыгрыш, моральные выборы, исследования и тактические сражения.'
+        : 'I run campaigns and one-shots where player decisions shape the world. My games combine roleplay, exploration, meaningful choices and tactical combat.',
       specTitle: ru ? 'Специализация' : 'Specialization',
       specs: ru
         ? ['Кинематографичные истории', 'Тактические сражения', 'Отыгрыш персонажей', 'Кампании с последствиями выбора']
