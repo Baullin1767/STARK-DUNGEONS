@@ -17,28 +17,18 @@ const sharedCampaigns = [
   },
   {
     id: 'lux-tea-billy',
-    image: '/images/campaigns/Lux word illustration.png',
+    image: '/images/campaigns/The Last Voyage of the Tea Billy.png',
     tags: ['oneShot', 'mystery', 'darkFantasy']
   },
   {
     id: 'lux-crimson-cliff',
-    image: '/images/campaigns/Lux word illustration.png',
+    image: '/images/campaigns/The Map of Crimson Cliff.png',
     tags: ['oneShot', 'mystery']
   },
   {
     id: 'lux-first-descent',
-    image: '/images/campaigns/Lux word illustration.png',
+    image: '/images/campaigns/The First Descent.png',
     tags: ['oneShot', 'mystery', 'darkFantasy']
-  },
-  {
-    id: 'lux-living-dead',
-    image: '/images/campaigns/Lux Age of the Living Dead.png',
-    tags: ['campaign', 'darkFantasy']
-  },
-  {
-    id: 'lux-lost-kingdom',
-    image: '/images/campaigns/Lux The Lost Kingdom.png',
-    tags: ['campaign', 'mystery']
   },
   {
     id: 'lux-underdark',
@@ -49,6 +39,16 @@ const sharedCampaigns = [
     id: 'lux-edge-world',
     image: '/images/campaigns/Lux Expedition to the Edge of the World.png',
     tags: ['campaign', 'mystery']
+  },
+  {
+    id: 'lux-lost-kingdom',
+    image: '/images/campaigns/Lux The Lost Kingdom.png',
+    tags: ['campaign', 'mystery']
+  },
+  {
+    id: 'lux-living-dead',
+    image: '/images/campaigns/Lux Age of the Living Dead.png',
+    tags: ['campaign', 'darkFantasy']
   }
 ];
 
