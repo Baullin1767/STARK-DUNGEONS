@@ -27,3 +27,5 @@
  GET / 200 in 186ms
  ✓ Compiled /api/booking in 157ms (1615 modules)
  POST /api/booking 200 in 454ms
+ ✓ Compiled in 412ms (1610 modules)
+ GET / 200 in 173ms
